@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AwaazForm Assistant</title><link rel="stylesheet" href="sidepanel.css"></head>
+<body>
+  <header><div class="brand"><span class="owl">🦉</span><div><strong>AwaazForm</strong><small>Voice-guided form assistant</small></div></div><span id="connection" class="status">Checking tab…</span></header>
+  <main>
+    <section id="authPanel" class="panel">
+      <h2>Sign in to use your profile</h2><p>Your saved basic details can be matched to questions on supported forms.</p>
+      <form id="loginForm"><label>Email<input name="email" type="email" required autocomplete="username"></label><label>Password<input name="password" type="password" required autocomplete="current-password"></label><button class="primary">Sign in</button></form>
+      <p id="authError" class="error"></p><p class="hint">Create an account from the AwaazForm website first.</p>
+    </section>
+    <section id="assistantPanel" hidden>
+      <div class="panel"><div class="form-title"><div><small>OPEN FORM</small><h2 id="formTitle">Google Form</h2></div><button id="refresh" class="secondary">↻</button></div><p id="formMeta" class="hint"></p><div class="progress"><span id="progressFill"></span></div><p id="progressText" class="hint"></p></div>
+      <div class="panel question-panel"><div class="q-label" id="questionNumber">QUESTION 1</div><h2 id="questionText">Loading questions…</h2><p id="questionRequired" class="hint"></p><button id="readQuestion" class="secondary full">🔊 Read question aloud</button>
+        <div id="optionsBox" class="options" hidden></div>
+        <label for="answer" class="answer-label">Your answer</label><textarea id="answer" rows="3" placeholder="Speak or type your answer"></textarea>
+        <div class="actions"><button id="speakAnswer" class="secondary">🎙 Speak</button><button id="manualDone" class="secondary">I filled it manually</button><button id="fillAnswer" class="primary">Fill & next →</button></div>
+        <p id="actionMessage" class="message" role="status"></p>
+      </div>
+      <div class="panel"><h3>Form actions</h3><div class="actions"><button id="nextSection" class="secondary">Next section</button><button id="submitForm" class="danger">Submit form</button></div><p class="hint">Submit becomes available when you have reviewed all visible questions. Google Forms may have multiple sections; use Next section to continue.</p></div>
+      <div class="panel account-row"><div><strong id="userName"></strong><small id="userEmail"></small></div><button id="logout" class="secondary">Sign out</button></div>
+    </section>
+  </main>
+  <script src="sidepanel.js"></script>
+</body></html>

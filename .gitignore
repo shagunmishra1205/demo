@@ -1,0 +1,41 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+node_modules/
+.env
+
+# backend
+*.db
+backend/.env
+backend/venv/
+backend/.pytest_cache/
+.venv/
+# Python virtual environment
+venv/
+.venv/
+backend/venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Backup files
+*.before-hindi
+*.bak
+*.backup
+
+# System files
+.DS_Store
+Thumbs.db
